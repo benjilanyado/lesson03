@@ -8,6 +8,16 @@ flintstones = ["Fred", "Wilma", "Barney", "Betty", "Dino"]
 # Use the months array to test your method and that it returns "January"
 # or the flintstones arrary to see if it returns "Fred"
 
+def get_index(array)
+
+	return array[0]
+
+end 
+
+puts get_index(months)
+
+puts get_index(flintstones)
+
 
 
 
@@ -21,7 +31,19 @@ puts "\n--------------------" # line to distinguish exercise output
 # Remember to change your input to an integer
 
 
+def which_entry(array)
 
+	puts "Which number you want?"
+
+	input = $stdin.gets.chomp
+
+	input = input.to_i
+
+	return array[input]
+
+end
+
+puts which_entry(months)
 
 
 
@@ -32,6 +54,20 @@ puts "\n--------------------" # line to distinguish exercise output
 # 11 ("December"), and displays the corresponding month names
 # in a single line. 
 
+def get_indexes_in_array(array, *indexes)  #NB the * means you can add mor than one thing
+
+
+	indexes.each do |num|
+
+		puts array[num]
+
+	end  #end of the "do"
+
+end #end of the "def"
+
+	
+
+ get_indexes_in_array(months, 2,3,5,6)
 
 
 

@@ -12,6 +12,38 @@ months = ["January", "February", "March", "April", "May", "June", "July", "Augus
 
 
 
+	puts "enter 1,2,3 or 4 please"
+	input = $stdin.gets.chomp
+
+	if input == "1"
+
+		puts months[0..2]
+
+	elsif input == "2"
+	
+		puts months[3..5]	
+
+	elsif input == "3" 
+
+		puts months[6..8]	
+	
+	elsif input == "4" 
+
+		puts months[9..11]
+
+
+	else 
+		puts "Errr that's not what I said, fuckwit"	
+
+		
+	end
+
+
+
+
+
+
+
 
 
 
@@ -24,4 +56,27 @@ puts "\n--------------------" # line to distinguish exercise output
 # Assuming 0/360 is North, use "case" and "when" to output whether 
 # the degrees point Northeast, Southeast, Southwest, or Northwest. 
 # Remember that $stdin.gets.chomp retrieves a string value.
+
+
+puts "what degree do you want"
+input = $stdin.gets.chomp
+
+input = input.to_i
+
+	compass_point = case input 
+		when 0..89 then 'Northeast'
+		when 90..179 then "Southeast"
+		when 180..269 then "Southwest"
+		when 270..359 then "Northeast"
+		else "Dunno, twat"
+
+		end	
+
+	puts compass_point	
+
+
+
+
+
+
 
